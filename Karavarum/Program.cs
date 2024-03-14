@@ -1,47 +1,32 @@
 ﻿using Karavarum;
+using System.Linq;
 
-List<List<int>> FirstMatrix = new List<List<int>> {
-            new List<int> { 1, 2, 3},
-            new List<int> { 5, 6, 4}
-};
-
-List<List<int>> SecondMatrix = new List<List<int>> {
-            new List<int> { 1, 2, 3, 4 },
-            new List<int> { 1, 2, 3, 4 },
-            new List<int> { 5, 6, 7, 8 }
-};
-
-
-var result = OperationsWithMatrices.Multiplay(FirstMatrix, SecondMatrix);
-
-foreach (var vector in result)
+int[,] C =
 {
-    foreach (var item2 in vector)
-    {
-        Console.Write(item2 + " ");
-    }
-    Console.WriteLine();
-}
-
-List<List<int>> examople = new List<List<int>> {
-         new List<int> { 1, 2, 3, 4},
-         new List<int> { 1, 2, 3, 5},
-         new List<int> { 5, 6, 4, 8},
-         new List<int> { 5, 6, 4, 3}
+    { 1, 4  },
+    { 1, 15 },
+    { 2, 8  },
+    { 2, 12 },
+    { 3, 5  },
+    { 3, 9  },
+    { 3, 14 },
+    { 4, 7  },
+    { 5, 11 },
+    { 6, 10 },
+    { 7, 13 },
+    { 8, 7  },
+    { 8, 16 },
+    { 9, 12 },
+    { 10, 0 },
+    { 11, 0 },
+    { 11,10 },
+    { 12,16 },
+    { 13, 0 },
+    { 14, 6 },
+    { 14,11 },
+    { 15, 13 },
+    { 16, 0 },
 };
 
-var r = OperationsWithMatrices.TraceOfSquare(examople);
 
-Console.WriteLine("\n" + r);
-
-double[,] matrix = {
-            { 1, 2, 3 },
-            { 4, 50, 6 },
-            { 7, 8, 922 }
-        };
-
-int n = matrix.GetLength(0);
-
-double determinant = OperationsWithMatrices.CalculateDeterminant(matrix, n);
-
-Console.WriteLine($"Determinant: {determinant}");
+AnalysisOfGraphs.GetAllInfo(C);
